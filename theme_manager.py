@@ -51,5 +51,5 @@ def get_default_cfg() -> str:
         case _:
             raise TypeError('Unsupported Operating System')
     Logger._instance.get_logger().info('Detected operating system is %s' % os_name)
-    Logger._instance.get_logger().info('Dark mode is %s' ('enabled' if 'dark' in src else 'disabled'))
+    Logger._instance.get_logger().info('Dark mode is %s' % ('enabled' if 'dark' in src else 'disabled'))
     return src
