@@ -10,6 +10,9 @@ class Logger:
         return cls._instance
 
     def init_logger(self):
+        if hasattr(self, "logger") and self.logger.handlers:
+            return
+
         self.logger = logging.getLogger("Logger")
         self.logger.setLevel(logging.DEBUG)
 
